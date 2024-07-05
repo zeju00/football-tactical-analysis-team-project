@@ -1,0 +1,158 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #8B0000; /* 더 진한 크림슨 색 */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+header a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto 0; /* 상단에 고정된 헤더의 높이만큼 마진 추가 */
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #808080; /* 회색 요소 */
+    padding-bottom: 10px;
+}
+
+h2.about-link {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* 메뉴 간 간격을 늘림 */
+}
+
+.nav a {
+    flex: 1;
+    background-color: #8B0000; /* 더 진한 크림슨 색 */
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* 메뉴 칸 크기를 줄임 */
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s, transform 0.3s;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px); /* 아래에서 올라오는 효과 */
+}
+
+.nav a.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav a:hover {
+    background-color: #5B0000; /* 더 진한 호버 크림슨 색 */
+    border: 2px solid #808080; /* 회색 테두리 */
+}
+
+.form-container, .table-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100px;
+    align-self: flex-end;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 40px; /* Add space between the table container and the footer */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.result {
+    margin-top: 10px;
+    color: green;
+}
+
+footer {
+    margin-top: 40px; /* Add space between the footer and the rest of the content */
+    background-color: #8B0000; /* 더 진한 크림슨 색 */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    border-top: 2px solid #808080; /* 회색 요소 */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+img.fade-in-image {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
